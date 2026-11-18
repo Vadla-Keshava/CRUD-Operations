@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nextronics Store</h1>
+        <p>Product Management System</p>
+    </header>
+
+    <main>
+
+        <!-- Add Product Form -->
+        <section class="form-section">
+            <h2 id="formTitle">Add New Product</h2>
+
+            <form id="productForm">
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Product Price"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="productDescription"
+                    placeholder="Product Description"
+                    required
+                >
+
+                <input
+                    type="url"
+                    id="productImage"
+                    placeholder="Product Image URL"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add Product
+                </button>
+
+                <button type="button" id="cancelBtn" hidden>
+                    Cancel Edit
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Products -->
+        <section>
+            <h2>Our Products</h2>
+            <div id="productList" class="product-list"></div>
+        </section>
+
+        <!-- Shopping Cart -->
+        <section>
+            <h2>My Shopping Cart</h2>
+
+            <div id="cartList"></div>
+
+            <div class="cart-summary">
+                <h3 id="grandTotal">Total: ₹0</h3>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Product Details Dialog -->
+    <dialog id="detailsDialog">
+        <div class="details-content">
+            <button type="button" id="closeDetails" class="close-btn">
+                ✕
+            </button>
+            <div id="detailsContent"></div>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>Flipkart CRUD Shopping Cart | HTML CSS JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
